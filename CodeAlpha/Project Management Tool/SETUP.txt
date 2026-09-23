@@ -1,0 +1,111 @@
+FLOWBOARD - SETUP GUIDE
+By Owais Ahmed
+https://github.com/Owais-Ahmed-Siddiqui
+==========================================
+
+YOU NEED:
+- Node.js 18 or newer  ->  https://nodejs.org
+- Python 3.11+         ->  https://python.org
+  (Only if you want the Python backend)
+
+------------------------------------------
+FRONTEND - 3 STEPS (WORKS INSTANTLY)
+------------------------------------------
+
+1. Open a terminal in this folder
+2. Run: npm install
+   Wait ~30 seconds. This downloads React etc.
+3. Run: npm run dev
+4. Open the link it shows, usually:
+   http://localhost:5173
+
+Login screen appears.
+Email: owais@flowboard.dev
+Password: anything (demo mode)
+
+DONE! You can now:
+- Drag tasks between columns
+- Click a task to open comments
+- Post to the Activity Feed on the right
+- Create new projects in the left sidebar
+
+No internet / no backend needed. Everything is saved in your browser.
+
+To build for production:
+  npm run build
+  Your finished website will be in /dist
+
+------------------------------------------
+BACKEND (OPTIONAL) - PYTHON / FASTAPI
+------------------------------------------
+
+This gives you a real API + WebSocket realtime.
+
+1. Open a NEW terminal
+2. cd backend
+3. Create virtual environment:
+   
+   Windows:
+     python -m venv .venv
+     .venv\Scripts\activate
+   
+   Mac / Linux:
+     python3 -m venv .venv
+     source .venv/bin/activate
+
+4. Install packages:
+   pip install -r requirements.txt
+
+5. Start server:
+   uvicorn main:app --reload --port 8000
+
+6. Open: http://localhost:8000/docs
+   You see interactive API docs.
+
+Default accounts:
+  owais@flowboard.dev / demo123
+  ayesha@flowboard.dev / demo123
+  zain@flowboard.dev / demo123
+
+WebSocket realtime URL:
+  ws://localhost:8000/ws/feed
+
+NOTE: The React frontend in this repo uses local mock data by default,
+so it will work WITHOUT the backend. To connect them, edit
+src/lib/store.ts and replace the mock functions with fetch() calls
+to http://localhost:8000/api/...
+
+------------------------------------------
+TROUBLESHOOTING
+------------------------------------------
+
+"npm: command not found"
+ -> Install Node.js from nodejs.org, restart terminal
+
+"python: command not found"
+ -> Try python3 instead of python
+ -> Or install Python from python.org and tick "Add to PATH"
+
+Port 5173 already in use?
+ -> npm run dev -- --port 3000
+
+Port 8000 already in use?
+ -> uvicorn main:app --reload --port 8001
+
+White screen?
+ -> Hard refresh: Ctrl+Shift+R
+ -> Check console: F12
+
+------------------------------------------
+WHAT IS INSIDE?
+------------------------------------------
+
+- 7 teammates (Owais, Ayesha, Zain, Sara, Hamza, Nadia, Ali)
+- 4 projects
+- 12 tasks, with comments, checklists
+- 6 social feed posts
+- Notifications
+- Beautiful kanban board
+
+Enjoy!
+- Owais Ahmed

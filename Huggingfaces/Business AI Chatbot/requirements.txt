@@ -1,0 +1,10 @@
+streamlit
+streamlit-lottie
+google-generativeai
+python-dotenv
+PyPDF2
+duckduckgo-search
+numpy
+plotly
+pandas
+requests

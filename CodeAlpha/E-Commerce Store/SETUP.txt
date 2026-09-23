@@ -1,0 +1,344 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                     VOGUESTORE — SETUP GUIDE                         ║
+║            Full-Stack E-Commerce with React + Django + MongoDB       ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+Author: Owais Ahmed
+GitHub: https://github.com/Owais-Ahmed-Siddiqui
+
+═══════════════════════════════════════════════════════════════════════
+ TABLE OF CONTENTS
+═══════════════════════════════════════════════════════════════════════
+
+  1. What You Need (Prerequisites)
+  2. Step 1 — Download the Project
+  3. Step 2 — Set Up the Frontend (React)
+  4. Step 3 — Set Up MongoDB Database
+  5. Step 4 — Set Up the Backend (Django)
+  6. Step 5 — Connect Everything Together
+  7. Step 6 — Run the Application
+  8. Troubleshooting (Common Problems & Fixes)
+  9. FAQ
+
+
+═══════════════════════════════════════════════════════════════════════
+ 1. WHAT YOU NEED (PREREQUISITES)
+═══════════════════════════════════════════════════════════════════════
+
+Before starting, make sure you have these installed on your computer:
+
+  ┌─────────────────────────────────────────────────────────────────┐
+  │  Software        │  Version   │  Download From                  │
+  ├─────────────────────────────────────────────────────────────────┤
+  │  Node.js         │  18+       │  https://nodejs.org             │
+  │  Python          │  3.10+     │  https://python.org             │
+  │  MongoDB         │  6.0+      │  https://mongodb.com/try/download│
+  │  Git             │  Latest    │  https://git-scm.com             │
+  │  Code Editor     │  Any       │  https://code.visualstudio.com   │
+  └─────────────────────────────────────────────────────────────────┘
+
+  HOW TO CHECK if they're installed (open Terminal / Command Prompt):
+
+    node --version          → Should show v18.x.x or higher
+    python --version        → Should show 3.10.x or higher
+    mongod --version        → Should show 6.x.x or higher
+    git --version           → Should show a version number
+
+  If any of these say "command not found", install that software first.
+
+
+═══════════════════════════════════════════════════════════════════════
+ 2. STEP 1 — DOWNLOAD THE PROJECT
+═══════════════════════════════════════════════════════════════════════
+
+  Option A: Using Git (Recommended)
+  ─────────────────────────────────
+  Open Terminal / Command Prompt and type:
+
+    git clone https://github.com/Owais-Ahmed-Siddiqui/CodeAlpha_E-commerce-Store.git
+    cd VogueStore
+
+  Option B: Download ZIP
+  ──────────────────────
+  1. Go to https://github.com/Owais-Ahmed-Siddiqui/CodeAlpha_E-commerce-Store.git
+  2. Click the green "Code" button
+  3. Click "Download ZIP"
+  4. Extract the ZIP file
+  5. Open the extracted folder
+
+
+═══════════════════════════════════════════════════════════════════════
+ 3. STEP 2 — SET UP THE FRONTEND (React)
+═══════════════════════════════════════════════════════════════════════
+
+  The frontend is the visual part of the website (what you see in the browser).
+
+  1. Open Terminal / Command Prompt
+  2. Navigate to the frontend folder:
+
+     On Mac/Linux:
+       cd VogueStore/frontend
+
+     On Windows:
+       cd VogueStore\frontend
+
+     NOTE: If you downloaded the ZIP, the project folder might be at a
+     different path. Navigate to wherever you extracted it.
+
+  3. Install all the required packages:
+
+     npm install
+
+     → This will download all dependencies. It may take 2-5 minutes.
+     → You should see a "node_modules" folder appear.
+
+  4. Start the development server:
+
+     npm run dev
+
+     → You should see something like:
+       "Local: http://localhost:5173"
+
+  5. Open your browser and go to:
+
+     http://localhost:5173
+
+  🎉 You should now see the VogueStore homepage!
+
+
+═══════════════════════════════════════════════════════════════════════
+ 4. STEP 3 — SET UP MONGODB DATABASE
+═══════════════════════════════════════════════════════════════════════
+
+  MongoDB stores all the data (products, users, orders).
+
+  Option A: Local MongoDB
+  ───────────────────────
+  1. Install MongoDB Community Server from:
+     https://www.mongodb.com/try/download/community
+
+  2. After installation, MongoDB should start automatically.
+     To verify, open Terminal and type:
+
+     mongosh
+
+     → You should see a "test>" prompt. Type "exit" to quit.
+
+  Option B: MongoDB Atlas (Cloud — Free)
+  ───────────────────────────────────────
+  1. Go to https://www.mongodb.com/atlas
+  2. Create a free account
+  3. Create a free cluster
+  4. Click "Connect" → "Connect your application"
+  5. Copy the connection string (looks like:
+     mongodb+srv://username:password@cluster.mongodb.net/)
+  6. You'll need this for Step 4
+
+
+═══════════════════════════════════════════════════════════════════════
+ 5. STEP 4 — SET UP THE BACKEND (Django)
+═══════════════════════════════════════════════════════════════════════
+
+  The backend is the server that handles data, authentication, and orders.
+
+  1. Open a NEW Terminal / Command Prompt window
+     (Keep the frontend terminal running!)
+
+  2. Navigate to the backend folder:
+
+     On Mac/Linux:
+       cd VogueStore/backend
+
+     On Windows:
+       cd VogueStore\backend
+
+  3. Create a Python virtual environment:
+
+     On Mac/Linux:
+       python3 -m venv venv
+       source venv/bin/activate
+
+     On Windows:
+       python -m venv venv
+       venv\Scripts\activate
+
+     → You should see "(venv)" at the start of your terminal prompt.
+
+  4. Install the required Python packages:
+
+     pip install -r requirements.txt
+
+     → This downloads Django, REST framework, MongoDB drivers, etc.
+     → This may take 1-3 minutes.
+
+  5. Create the __init__.py files needed by Django:
+
+     On Mac/Linux:
+       touch voguestore/__init__.py products/__init__.py users/__init__.py orders/__init__.py
+
+     On Windows:
+       type nul > voguestore\__init__.py
+       type nul > products\__init__.py
+       type nul > users\__init__.py
+       type nul > orders\__init__.py
+
+  6. If using MongoDB Atlas (cloud), create a .env file in the backend/ folder:
+
+     DJANGO_SECRET_KEY=your-secret-key-here
+     DJANGO_DEBUG=True
+     MONGO_DB_NAME=voguestore
+     MONGO_HOST=your-cluster.mongodb.net
+     MONGO_PORT=27017
+     MONGO_USER=your-username
+     MONGO_PASSWORD=your-password
+     MONGO_AUTH_SOURCE=admin
+
+  7. Run database migrations:
+
+     python manage.py migrate
+
+     → This creates all the database tables.
+
+  8. Create an admin user:
+
+     python manage.py createsuperuser
+
+     → Enter an email, username, and password when prompted.
+
+  9. Start the Django server:
+
+     python manage.py runserver
+
+     → You should see:
+       "Starting development server at http://127.0.0.1:8000/"
+
+  10. Test the API in your browser:
+
+      http://127.0.0.1:8000/api/products/
+
+      → You should see a JSON response with products data.
+
+
+═══════════════════════════════════════════════════════════════════════
+ 6. STEP 5 — CONNECT FRONTEND TO BACKEND
+═══════════════════════════════════════════════════════════════════════
+
+  The frontend works standalone with mock data by default.
+  To connect it to the Django backend:
+
+  1. In the frontend folder, create a file called .env:
+
+     VITE_API_URL=http://127.0.0.1:8000/api
+
+  2. The frontend will automatically use the Django API
+     when the VITE_API_URL is set.
+
+  NOTE: The frontend works perfectly WITHOUT the backend!
+  It uses built-in product data and localStorage for the cart.
+  The backend is needed only for persistent database storage,
+  user authentication with JWT, and order management.
+
+
+═══════════════════════════════════════════════════════════════════════
+ 7. STEP 6 — RUN THE APPLICATION
+═══════════════════════════════════════════════════════════════════════
+
+  You need TWO terminal windows running:
+
+  Terminal 1 (Frontend):          Terminal 2 (Backend):
+  ─────────────────────           ─────────────────────
+  cd VogueStore/frontend          cd VogueStore/backend
+  npm run dev                     source venv/bin/activate
+                                  python manage.py runserver
+
+  Then open your browser:
+  → http://localhost:5173        (Frontend website)
+  → http://localhost:8000/admin   (Django admin panel)
+  → http://localhost:8000/api/    (API browser)
+
+
+═══════════════════════════════════════════════════════════════════════
+ 8. TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════════
+
+  Problem: "npm install" fails
+  Solution:
+    - Make sure Node.js is installed: node --version
+    - Try deleting node_modules and package-lock.json, then run npm install again
+    - Try: npm install --legacy-peer-deps
+
+  Problem: "pip install" fails
+  Solution:
+    - Make sure your virtual environment is activated (you see "(venv)")
+    - Upgrade pip first: pip install --upgrade pip
+    - Try installing packages one by one
+
+  Problem: "python manage.py migrate" fails with MongoDB error
+  Solution:
+    - Make sure MongoDB is running: try "mongosh" in terminal
+    - Check your .env file has correct MongoDB credentials
+    - Make sure djongo and pymongo are installed
+
+  Problem: Frontend shows blank page
+  Solution:
+    - Check the terminal for errors
+    - Make sure you're at http://localhost:5173 (not 3000)
+    - Try hard refresh: Ctrl+Shift+R (or Cmd+Shift+R on Mac)
+
+  Problem: "Module not found" error in Python
+  Solution:
+    - Activate your virtual environment
+    - Run: pip install -r requirements.txt
+
+  Problem: CORS errors in browser console
+  Solution:
+    - Make sure django-cors-headers is installed
+    - Check settings.py has CORS_ALLOWED_ORIGINS set correctly
+    - Both frontend and backend must be running
+
+  Problem: Port already in use
+  Solution:
+    - Frontend: npm run dev -- --port 3000
+    - Backend:  python manage.py runserver 8001
+
+
+═══════════════════════════════════════════════════════════════════════
+ 9. FAQ
+═══════════════════════════════════════════════════════════════════════
+
+  Q: Can I run just the frontend without the backend?
+  A: YES! The frontend works standalone with mock data.
+     Just run "npm install" and "npm run dev" in the frontend folder.
+
+  Q: Can I use a different database instead of MongoDB?
+  A: Yes. Change the DATABASES setting in backend/voguestore/settings.py.
+     Django supports PostgreSQL, MySQL, and SQLite out of the box.
+
+  Q: How do I deploy this to production?
+  A: Frontend: Build with "npm run build" and deploy the dist/ folder
+         to Vercel, Netlify, or any static host.
+     Backend: Deploy to Railway, Render, or a VPS with Gunicorn.
+     Database: Use MongoDB Atlas for cloud MongoDB.
+
+  Q: How do I add more products?
+  A: Option 1: Use the Django admin panel at /admin
+     Option 2: Add them to frontend/src/data/products.ts
+     Option 3: Use the Django shell: python manage.py shell
+
+  Q: I'm on Windows and "source venv/bin/activate" doesn't work.
+  A: On Windows, use: venv\Scripts\activate
+
+  Q: How do I stop the servers?
+  A: Press Ctrl+C in each terminal window.
+
+
+═══════════════════════════════════════════════════════════════════════
+
+  That's it! You're ready to go. 🚀
+
+  If you have any issues, feel free to open a GitHub issue at:
+  https://github.com/Owais-Ahmed-Siddiqui/CodeAlpha_E-commerce-Store.git/issues
+
+  Made with ❤️ by Owais Ahmed
+
+═══════════════════════════════════════════════════════════════════════

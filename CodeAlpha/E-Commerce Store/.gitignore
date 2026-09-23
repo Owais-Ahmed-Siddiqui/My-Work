@@ -1,0 +1,57 @@
+# ─── Python ───
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+eggs/
+*.eggs/
+develop-eggs/
+
+# ─── Virtual Environment ───
+venv/
+env/
+.venv/
+ENV/
+
+# ─── Environment Variables ───
+.env
+.env.local
+.env.production
+
+# ─── Database ───
+*.sqlite3
+db.sqlite3
+
+# ─── IDE / Editors ───
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ─── Node / Frontend ───
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ─── Django ───
+backend/staticfiles/
+backend/media/
+*.log
+
+# ─── Coverage ───
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# ─── Misc ───
+*.bak
+*.tmp
+.cache/

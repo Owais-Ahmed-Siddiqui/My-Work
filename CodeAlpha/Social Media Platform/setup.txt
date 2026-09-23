@@ -1,0 +1,31 @@
+HOW TO SETUP SOCIALLY ON YOUR COMPUTER (FOR BEGINNERS)
+------------------------------------------------------
+
+Hi there! Here is how you can run this app on your own computer:
+
+STEP 1: DOWNLOAD THE CODE
+Download the files and unzip them in a folder.
+
+STEP 2: INSTALL NODE.JS
+Go to nodejs.org and download the "LTS" version. Install it like any other program.
+
+STEP 3: RUN THE FRONTEND (The part you see)
+1. Open a Terminal (or Command Prompt).
+2. Type "cd" followed by a space, then drag the project folder into the terminal and press Enter.
+3. Type: npm install (This installs all the tools needed).
+4. Type: npm run dev (This starts the app).
+5. Open your browser and go to the link shown (usually http://localhost:5173).
+
+STEP 4: RUN THE BACKEND (The brain of the app)
+1. Open a new terminal.
+2. Type "cd backend".
+3. If you have Python installed, type:
+   python -m venv venv
+   venv\Scripts\activate (on Windows) or source venv/bin/activate (on Mac)
+   pip install django djangorestframework django-cors-headers
+   python manage.py migrate
+   python manage.py runserver
+4. The backend is now running on http://localhost:8000.
+
+THAT'S IT! You are now a social media owner!
+Created with ❤️ by Owais Ahmed.
