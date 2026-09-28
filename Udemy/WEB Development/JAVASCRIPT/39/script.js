@@ -1,0 +1,1 @@
+alert ("Hello! This is a simple alert message from your script.js file.");
