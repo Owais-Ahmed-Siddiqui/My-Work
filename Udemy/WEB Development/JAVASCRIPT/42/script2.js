@@ -41,5 +41,5 @@ z-- // ans = 4
 // console.log(name) // prints the entered name to the console
 
 alert("Hello World") // prints a message to the console
-let x = prompt("Enter your name: ") // shows a message box with an input field and OK/Cancel buttons
-let y = confirm("Are you sure?") // shows a message box with OK/Cancel buttons
+let b = prompt("Enter your name: ") // shows a message box with an input field and OK/Cancel buttons
+let c = confirm("Are you sure?") // shows a message box with OK/Cancel buttons
