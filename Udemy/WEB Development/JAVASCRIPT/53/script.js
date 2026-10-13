@@ -11,6 +11,9 @@ const para = document.querySelector("#p1");
 // to access by class name (use .)
 const list = document.querySelector(".nav-item");
 const list2 = document.querySelectorAll(".nav-item");
+const list3 = document.querySelectorAll(".nav-item")[1];
+const list4 = document.querySelectorAll(".nav-item")[2];
+const list5 = document.querySelectorAll(".nav-item")[3];
 
 
 console.log (para1)
@@ -21,3 +24,6 @@ console.log (heading)
 console.log (para)
 console.log (list)
 console.log (list2)
+console.log (list3)
+console.log (list4)
+console.log (list5)
