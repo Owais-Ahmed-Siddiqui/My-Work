@@ -17,4 +17,9 @@ mybutton.style.backgroundColor = 'blue';
 mybutton.style.color = 'white';
 mybutton.style.padding = '10px 20px';
 mybutton.style.border = '2px solid black';
+mybutton.style.borderRadius = '5px';
+
+mybutton.addEventListener('click', () => {
+    alert('Button clicked!');
+});
 
