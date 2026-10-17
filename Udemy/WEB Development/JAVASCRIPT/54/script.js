@@ -19,7 +19,14 @@ mybutton.style.padding = '10px 20px';
 mybutton.style.border = '2px solid black';
 mybutton.style.borderRadius = '5px';
 
+// Add event listener to the button ....................
+
 mybutton.addEventListener('click', () => {
     alert('Button clicked!');
 });
 
+const myinput = document.querySelector('#myInput');
+
+myinput.addEventListener('input', () => {
+    console.log(myinput.value);
+});
