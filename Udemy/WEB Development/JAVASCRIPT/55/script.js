@@ -20,3 +20,7 @@ myimg.setAttribute('src', 'https://via.placeholder.com/150');
 
 const mylink = document.querySelector('a');
 mylink.setAttribute('href', 'https://www.example.com');
+const linkText = mylink.textContent;
+mylink.setAttribute('title', 'This is a link to example.com');
+linkText = mylink.textContent;
+console.log(linkText);
