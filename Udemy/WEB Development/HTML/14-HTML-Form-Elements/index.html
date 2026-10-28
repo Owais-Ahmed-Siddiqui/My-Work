@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>HTML Form Elements</title>
 </head>
+
 <body>
 
-<h1>Practice Form</h1>
-<form action="#" method="get">
-<p><label for="name">Name:</label> <input id="name" name="name" type="text" required></p>
-<p><label for="email">Email:</label> <input id="email" name="email" type="email"></p>
-<p><label for="password">Password:</label> <input id="password" name="password" type="password"></p>
-<fieldset><legend>Choose a level</legend><label><input type="radio" name="level" value="beginner"> Beginner</label> <label><input type="radio" name="level" value="advanced"> Advanced</label></fieldset>
-<p><label><input type="checkbox" name="updates"> Send me updates</label></p>
-<p><label for="topic">Favorite topic:</label> <select id="topic" name="topic"><option>HTML</option><option>CSS</option></select></p>
-<p><label for="notes">Notes:</label><br><textarea id="notes" name="notes" rows="4" cols="30"></textarea></p>
-<button type="submit">Send form</button> <button type="reset">Clear</button>
-</form>
+    <h1>Practice Form</h1>
+    <form action="#" method="get">
+        <p><label for="name">Name:</label> <input id="name" name="name" type="text" required></p>
+        <p><label for="email">Email:</label> <input id="email" name="email" type="email"></p>
+        <p><label for="password">Password:</label> <input id="password" name="password" type="password"></p>
+        <fieldset>
+            <legend>Choose a level</legend><label><input type="radio" name="level" value="beginner"> Beginner</label>
+            <label><input type="radio" name="level" value="advanced"> Advanced</label>
+        </fieldset>
+        <p><label><input type="checkbox" name="updates"> Send me updates</label></p>
+        <p><label for="topic">Favorite topic:</label> <select id="topic" name="topic">
+                <option>HTML</option>
+                <option>CSS</option>
+            </select></p>
+        <p><label for="notes">Notes:</label><br><textarea id="notes" name="notes" rows="4" cols="30"></textarea></p>
+        <button type="submit">Send form</button> <button type="reset">Clear</button>
+    </form>
 
 </body>
+
 </html>
