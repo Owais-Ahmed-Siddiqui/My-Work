@@ -1,4 +1,14 @@
-p { color: steelblue; }
-.myClass { background-color: lightyellow; }
-#special { color: darkred; font-weight: bold; }
-h2, h3 { font-family: Georgia, serif; }
+p {
+  color: steelblue;
+}
+.myClass {
+  background-color: lightyellow;
+}
+#special {
+  color: darkred;
+  font-weight: bold;
+}
+h2,
+h3 {
+  font-family: Georgia, serif;
+}

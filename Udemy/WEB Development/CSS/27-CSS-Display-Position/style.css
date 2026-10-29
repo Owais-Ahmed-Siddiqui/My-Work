@@ -1,9 +1,51 @@
-body { min-height: 1200px; font-family: Arial, sans-serif; }
-.sticky { position: sticky; top: 0; z-index: 1; padding: 8px; background: lightyellow; }
-.block { display: block; background: lightblue; padding: 8px; }
-.inline { display: inline; background: lightyellow; }
-.inline-block { display: inline-block; padding: 12px; background: lightgreen; }
-.stage { margin: 20px; padding: 20px; background: #eee; }
-.relative { position: relative; width: 220px; height: 100px; background: skyblue; }
-.absolute { position: absolute; right: 8px; bottom: 8px; padding: 6px; background: gold; }
-.fixed { position: fixed; right: 12px; bottom: 12px; z-index: 2; padding: 8px; background: pink; }
+body {
+  min-height: 1200px;
+  font-family: Arial, sans-serif;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 8px;
+  background: lightyellow;
+}
+.block {
+  display: block;
+  background: lightblue;
+  padding: 8px;
+}
+.inline {
+  display: inline;
+  background: lightyellow;
+}
+.inline-block {
+  display: inline-block;
+  padding: 12px;
+  background: lightgreen;
+}
+.stage {
+  margin: 20px;
+  padding: 20px;
+  background: #eee;
+}
+.relative {
+  position: relative;
+  width: 220px;
+  height: 100px;
+  background: skyblue;
+}
+.absolute {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 6px;
+  background: gold;
+}
+.fixed {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+  padding: 8px;
+  background: pink;
+}

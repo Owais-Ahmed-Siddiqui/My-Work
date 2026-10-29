@@ -1,4 +1,17 @@
-p { width: 230px; border: 1px solid gray; padding: 8px; }
-.no-wrap { white-space: nowrap; overflow-x: auto; }
-.clip { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.break { overflow-wrap: anywhere; }
+p {
+  width: 230px;
+  border: 1px solid gray;
+  padding: 8px;
+}
+.no-wrap {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.clip {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.break {
+  overflow-wrap: anywhere;
+}

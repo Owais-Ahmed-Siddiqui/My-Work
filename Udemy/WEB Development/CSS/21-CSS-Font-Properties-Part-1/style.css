@@ -1,4 +1,13 @@
-body { font-family: Arial, sans-serif; }
-.serif { font-family: Georgia, serif; }
-.sans { font-family: Verdana, sans-serif; }
-.large { font-size: 24px; font-weight: 700; }
+body {
+  font-family: Arial, sans-serif;
+}
+.serif {
+  font-family: Georgia, serif;
+}
+.sans {
+  font-family: Verdana, sans-serif;
+}
+.large {
+  font-size: 24px;
+  font-weight: 700;
+}

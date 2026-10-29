@@ -1,5 +1,17 @@
-.center { text-align: center; }
-.underline { text-decoration: underline; }
-.upper { text-transform: uppercase; }
-.indent { text-indent: 32px; max-width: 400px; }
-.spaced { word-spacing: 10px; letter-spacing: 2px; }
+.center {
+  text-align: center;
+}
+.underline {
+  text-decoration: underline;
+}
+.upper {
+  text-transform: uppercase;
+}
+.indent {
+  text-indent: 32px;
+  max-width: 400px;
+}
+.spaced {
+  word-spacing: 10px;
+  letter-spacing: 2px;
+}

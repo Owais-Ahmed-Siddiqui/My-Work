@@ -1,6 +1,18 @@
-.container p { color: teal; }
-.parent > p { background-color: lightyellow; }
-span + p { color: darkorange; }
-span ~ p { text-decoration: underline; }
-a[href^="https"] { color: darkgreen; }
-a[href="#"] { color: gray; }
+.container p {
+  color: teal;
+}
+.parent > p {
+  background-color: lightyellow;
+}
+span + p {
+  color: darkorange;
+}
+span ~ p {
+  text-decoration: underline;
+}
+a[href^="https"] {
+  color: darkgreen;
+}
+a[href="#"] {
+  color: gray;
+}
