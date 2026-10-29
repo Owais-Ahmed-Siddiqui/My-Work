@@ -1,0 +1,7 @@
+p { padding: 12px; }
+.named { color: white; background-color: tomato; }
+.hex { color: #ffffff; background-color: #4169e1; }
+.rgb { color: rgb(20, 80, 40); background-color: rgb(190, 230, 190); }
+.rgba { background-color: rgba(255, 99, 71, 0.5); }
+.hsl { color: hsl(220, 70%, 35%); }
+.hsla { background-color: hsla(50, 100%, 50%, 0.5); }

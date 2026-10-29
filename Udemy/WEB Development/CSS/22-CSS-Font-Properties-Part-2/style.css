@@ -1,0 +1,4 @@
+.italic { font-style: italic; }
+.spaced { max-width: 320px; line-height: 1.8; }
+.small-caps { font-variant: small-caps; }
+body { font-family: Arial, sans-serif; }
