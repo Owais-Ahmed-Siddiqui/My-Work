@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.item {
+  padding: 20px;
+  background: lightblue;
+}
+.first {
+  flex: 1 1 120px;
+}
+.second {
+  flex: 2 1 180px;
+  align-self: flex-start;
+}
+.third {
+  flex: 1 2 220px;
+}

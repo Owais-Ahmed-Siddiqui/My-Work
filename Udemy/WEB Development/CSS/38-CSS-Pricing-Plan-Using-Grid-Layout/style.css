@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f5f8;
+  color: #243247;
+}
+h1 {
+  text-align: center;
+}
+.plans {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: 30px auto;
+}
+.card {
+  padding: 20px;
+  background: white;
+  border: 1px solid #ccd3dc;
+  border-radius: 8px;
+}
+.featured {
+  border: 3px solid royalblue;
+}
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: royalblue;
+}
+button {
+  padding: 10px;
+  background: royalblue;
+  color: white;
+  border: 0;
+}
+@media (max-width: 650px) {
+  .plans {
+    grid-template-columns: 1fr;
+  }
+}

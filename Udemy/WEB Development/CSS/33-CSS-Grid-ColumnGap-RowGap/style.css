@@ -1,0 +1,12 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 12px;
+}
+.grid div {
+  padding: 20px;
+  background: peachpuff;
+  border: 1px solid coral;
+}
+/* Try replacing both gap properties with gap: 12px 30px; */

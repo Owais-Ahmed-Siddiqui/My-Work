@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 180px;
+  background: #eee;
+}
+.container div {
+  padding: 24px;
+  background: lightblue;
+  border: 1px solid steelblue;
+}

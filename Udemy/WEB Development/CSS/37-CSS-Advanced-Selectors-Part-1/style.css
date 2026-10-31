@@ -1,0 +1,24 @@
+button:hover {
+  background: lightblue;
+}
+button:focus {
+  outline: 3px solid royalblue;
+}
+li:first-child {
+  color: green;
+}
+li:last-child {
+  color: tomato;
+}
+li:nth-child(2) {
+  font-weight: bold;
+}
+.note::before {
+  content: "Note: ";
+  color: crimson;
+  font-weight: bold;
+}
+.note::after {
+  content: " *";
+  color: crimson;
+}

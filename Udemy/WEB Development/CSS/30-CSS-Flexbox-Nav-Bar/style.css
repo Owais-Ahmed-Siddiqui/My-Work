@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px;
+  background: #263b5a;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+}
+.brand {
+  font-size: 22px;
+  font-weight: bold;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.links a:hover {
+  background: #405d82;
+}
+main {
+  padding: 20px;
+}

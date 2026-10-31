@@ -1,0 +1,13 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 120px 120px;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+  background: #eee;
+}
+.grid div {
+  padding: 12px 28px;
+  background: lightgreen;
+}

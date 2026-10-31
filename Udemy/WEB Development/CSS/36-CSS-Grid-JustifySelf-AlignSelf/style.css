@@ -1,0 +1,16 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 120px 120px;
+  gap: 10px;
+  background: #eee;
+}
+.grid div {
+  padding: 12px;
+  background: lightblue;
+}
+.special {
+  justify-self: start;
+  align-self: end;
+  background: gold;
+}
